@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="service-account-cloudfirestore.json" />
+    <None Remove="service-account-cloudstorage.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="service-account-cloudfirestore.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="service-account-cloudstorage.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Cloud.Firestore" Version="3.8.0" />
+    <PackageReference Include="Google.Cloud.Storage.V1" Version="4.10.0" />
+  </ItemGroup>
+
+</Project>
